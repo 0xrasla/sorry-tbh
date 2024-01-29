@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorry Baby</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://imgs.search.brave.com/sKWv6g-sCfqu3AtnHSX6v5ZTixyVIoBb2g14ELtv13M/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9naWZk/Yi5jb20vaW1hZ2Vz/L2hpZ2gvbWlsay1h/bmQtbW9jaGEtaS1h/bS1zb3JyeS00dDZ1/eXBlNWtkY3Q0Znhv/LmdpZg.gif"
+        alt=""
+        width="200"
+      />
+      <h1 class="title">Can u forgive me ?</h1>
+      <div class="buttons">
+        <button id="yes" class="button is-success">Yes</button
+        ><button id="no" class="button is-danger">No</button>
+      </div>
+    </div>
+
+    <script>
+      let yes = document.getElementById("yes");
+      let no = document.getElementById("no");
+      let img = document.querySelector("img");
+
+      yes.addEventListener("click", () => {
+        img.src =
+          "https://imgs.search.brave.com/xZfAO1etctL6FZL3a-6zvmtBGaAmu0xaav9t7a35HDU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9naWZk/Yi5jb20vaW1hZ2Vz/L2hpZ2gvbWlsay1h/bmQtbW9jaGEtYmVh/ci00OTgteC00MTIt/Z2lmLTU3YWJyZXp5/N3B4dWhodTQuZ2lm.gif";
+      });
+      no.addEventListener("click", () => {
+        const removeRem = (prevStyle, toadd) => {
+          if (!prevStyle) return "1rem";
+          return +prevStyle.split("rem")[0] + toadd + "rem";
+        };
+        yes.style.width = removeRem(yes.style.width, 3);
+        yes.style.height = removeRem(yes.style.height, 3);
+
+        img.src =
+          "https://imgs.search.brave.com/sKWv6g-sCfqu3AtnHSX6v5ZTixyVIoBb2g14ELtv13M/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9naWZk/Yi5jb20vaW1hZ2Vz/L2hpZ2gvbWlsay1h/bmQtbW9jaGEtaS1h/bS1zb3JyeS00dDZ1/eXBlNWtkY3Q0Znhv/LmdpZg.gif";
+      });
+    </script>
+  </body>
+</html>
